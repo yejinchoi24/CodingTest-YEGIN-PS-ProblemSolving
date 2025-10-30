@@ -1,1 +1,0 @@
-# CodingTest-YEGIN-PS:ProblemSolving
