@@ -3,6 +3,14 @@
 import java.util.*;
 
 class Solution {
+// enqueue(Object data)==offer() : 데이터를 넣는 함수
+// dequeue()=poll() : 데이터를 꺼내는 함수
+// peek() : 앞으로 꺼낼 데이터가 무엇인지 확인하는 함수
+// isEmpty() : 큐가 비었는지 확인하는 함수
+// isFull() : 큐가 꽉 찼는지 확인하는 함수
+// clear():큐를 비움
+// size():개수확인
+
     public int[] solution(int[] progresses, int[] speeds) {
         Queue<Integer> q = new LinkedList<>();
         List<Integer> answerList = new ArrayList<>();
@@ -11,7 +19,7 @@ class Solution {
             double remain = (100 - progresses[i]) / (double) speeds[i];
             int date = (int) Math.ceil(remain);
 
-            if (!q.isEmpty() && q.peek() < date) {
+            if (!q.isEmpty() && q.peek() < date) {//큐가 비지 않았고,
                 answerList.add(q.size());
                 q.clear();
             }
